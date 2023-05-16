@@ -10,13 +10,16 @@
       </div>
       <div class="languages">
         <div class="language_content">
-          <div class="language_content-item">DE</div>
+          <div class="language_content-item" style="opacity: 0.25;">DE</div>
           <div class="language_content-item">EN</div>
         </div>
       </div>
       <div >
         <div v-if="!isOpen" @click="$emit('open')" ></div>
       </div>
+      <div class="headerIcon">
+      <img :src="require(`../assets/imgs/headerIcon.svg`)">
+    </div>
     </div>
   </template>
 
@@ -37,12 +40,13 @@ export default {
 <style scoped lang="scss">
 @import "src/styles/styles.scss";
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .header {
     display: flex;
     height: 144px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 107px;
   }
   .logo{
     margin-right: auto;
@@ -77,6 +81,11 @@ export default {
         }
       }
     }
- 
+ .headerIcon {
+  position: absolute;
+  left: 0;
+top: 38px;
+z-index: -1;
+ }
 }
 </style>

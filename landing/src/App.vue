@@ -1,18 +1,21 @@
 <template>
   <div class="background">
-    <PageHeader :isOpen="isOpen" @open="setOpenNavbarBurger"/>
+    <PageHeader :isOpen="isOpen" @open="setOpenNavbarBurger" />
+    <Consultation />
   </div>
   
 </template>
 
 <script>
+import Consultation from './components/Consultation.vue';
 import PageHeader from './components/PageHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    PageHeader
-  },
+    PageHeader,
+    Consultation
+},
   data() {
     return {
       isOpen: false
